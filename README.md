@@ -1,0 +1,1 @@
+This repo is following Mosh Beginner tutorials for Java.
