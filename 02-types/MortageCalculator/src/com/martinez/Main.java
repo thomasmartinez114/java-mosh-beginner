@@ -39,6 +39,11 @@ public class Main {
         int numberPayment = PERIOD_YEARS * MONTHS_IN_YEAR;
         System.out.println("Total Payments through loan: " + numberPayment);
 
+        // Mortage
+        double mortage = PRINCIPAL * (monthlyInterest * Math.pow(1 + monthlyInterest, numberPayment)
+                                    / (Math.pow(1 + monthlyInterest, numberPayment) - 1));
+        System.out.println("Mortage bill is: " + mortage);
+
 
     }
 }
