@@ -31,7 +31,14 @@ public class Main {
         final int PERIOD_YEARS = 30;
 
 
-        // Calculations
-        float monthlyInterest = ANNUAL_INTEREST /
+        // Monthly Interest
+        float monthlyInterest = ANNUAL_INTEREST / PERCENT / MONTHS_IN_YEAR;
+        System.out.println("Monthly Interest rate is: " + monthlyInterest);
+
+        // # of Payments = PERIOD_YEARS * MONTHS_IN_YEAR
+        int numberPayment = PERIOD_YEARS * MONTHS_IN_YEAR;
+        System.out.println("Total Payments through loan: " + numberPayment);
+
+
     }
 }
