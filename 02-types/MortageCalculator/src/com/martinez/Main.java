@@ -18,11 +18,20 @@ public class Main {
         // Static inputs for now then test
         // M = ?
         // P = $100,000
-        // r = 5%
-        // n =
+        // r = 5.5%
+        // n = 30 years * 12 = 360
 
-        
+        // Static data
+        final byte MONTHS_IN_YEAR = 12;
+        final byte PERCENT = 100;
+
+        // Testing data
+        final int PRINCIPAL = 100_000;
+        final float ANNUAL_INTEREST = 5.5F;
+        final int PERIOD_YEARS = 30;
 
 
+        // Calculations
+        float monthlyInterest = ANNUAL_INTEREST /
     }
 }
