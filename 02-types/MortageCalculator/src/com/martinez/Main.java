@@ -66,7 +66,13 @@ public class Main {
         int numPayments = MONTHS_IN_YEAR * years;
         // System.out.println(numPayments);
 
-        
+        // Mortage Rate
+        double mortage = principal
+                * (monthlyInterest * Math.pow(1 + monthlyInterest, numPayments)
+                / (Math.pow(1 + monthlyInterest, numPayments) - 1));
 
+        // Format the Mortage into currency
+        String formattedMortage = NumberFormat.getCurrencyInstance().format(mortage);
+        System.out.println("Mortage is: " + formattedMortage);
     }
 }
