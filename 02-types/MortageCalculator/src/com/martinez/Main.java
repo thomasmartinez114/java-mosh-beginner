@@ -60,5 +60,13 @@ public class Main {
         float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
         // System.out.println(monthlyInterest);
 
+        // Period (Years)
+        System.out.print("Length of Loan (Years): ");
+        byte years = scanner.nextByte();
+        int numPayments = MONTHS_IN_YEAR * years;
+        // System.out.println(numPayments);
+
+        
+
     }
 }
