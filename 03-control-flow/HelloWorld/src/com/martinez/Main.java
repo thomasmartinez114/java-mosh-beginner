@@ -7,8 +7,9 @@ public class Main {
 ////	    boolean isWarm = temperature > 20 && temperature < 30;
 ////		System.out.println(isWarm);
 
-		boolean hasHighIncome = true;
+		boolean hasHighIncome = false;
 		boolean hasGoodCredit = true;
-		boolean isEligible = hasHighIncome || hasGoodCredit;
+		boolean hasCriminalRecord = false;
+		boolean isEligible = (hasHighIncome || hasGoodCredit) && !hasCriminalRecord;
     }
 }
