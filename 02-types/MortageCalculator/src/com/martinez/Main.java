@@ -40,10 +40,13 @@ public class Main {
         System.out.println("Total Payments through loan: " + numberPayment);
 
         // Mortage
-        double mortage = PRINCIPAL * (monthlyInterest * Math.pow(1 + monthlyInterest, numberPayment)
-                                    / (Math.pow(1 + monthlyInterest, numberPayment) - 1));
+        double mortage = PRINCIPAL
+                * (monthlyInterest * Math.pow(1 + monthlyInterest, numberPayment)
+                / (Math.pow(1 + monthlyInterest, numberPayment) - 1));
         System.out.println("Mortage bill is: " + mortage);
 
-
+        // Format the mortage into currency
+        String mortageFormatted = NumberFormat.getCurrencyInstance().format(mortage);
+        System.out.println("Mortage Payment is: " + mortageFormatted);
     }
 }
