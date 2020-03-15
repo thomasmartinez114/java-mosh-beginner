@@ -15,22 +15,14 @@ public class Main {
         // Formula used is:
         // M = (P(r(1+r)^n)/((1+r)^n)-1)
 
+        /* Testing Data
         // Static inputs for now then test
-        // M = ?
-        // P = $100,000
-        // r = 5.5%
-        // n = 30 years * 12 = 360
-
-        // Static data
+        // Testing data
         final byte MONTHS_IN_YEAR = 12;
         final byte PERCENT = 100;
-
-        // Testing data
         final int PRINCIPAL = 100_000;
         final float ANNUAL_INTEREST = 5.5F;
         final int PERIOD_YEARS = 30;
-
-
         // Monthly Interest
         float monthlyInterest = ANNUAL_INTEREST / PERCENT / MONTHS_IN_YEAR;
         // System.out.println("Monthly Interest rate is: " + monthlyInterest);
@@ -48,5 +40,25 @@ public class Main {
         // Format the mortage into currency
         String mortageFormatted = NumberFormat.getCurrencyInstance().format(mortage);
         System.out.println("Mortage Payment is: " + mortageFormatted);
+        */
+
+        //////////////////////////////////////////////////////////
+        // User input
+
+        final byte MONTHS_IN_YEAR = 12;
+        final byte PERCENT = 100;
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Principal
+        System.out.print("Principal/Loan: ");
+        int principal = scanner.nextInt();
+
+        // Interest Rate
+        System.out.print("Annual Interest Rate: ");
+        float annualInterest = scanner.nextFloat();
+        float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
+        // System.out.println(monthlyInterest);
+
     }
 }
