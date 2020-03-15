@@ -33,17 +33,17 @@ public class Main {
 
         // Monthly Interest
         float monthlyInterest = ANNUAL_INTEREST / PERCENT / MONTHS_IN_YEAR;
-        System.out.println("Monthly Interest rate is: " + monthlyInterest);
+        // System.out.println("Monthly Interest rate is: " + monthlyInterest);
 
         // # of Payments = PERIOD_YEARS * MONTHS_IN_YEAR
         int numberPayment = PERIOD_YEARS * MONTHS_IN_YEAR;
-        System.out.println("Total Payments through loan: " + numberPayment);
+        // System.out.println("Total Payments through loan: " + numberPayment);
 
         // Mortage
         double mortage = PRINCIPAL
                 * (monthlyInterest * Math.pow(1 + monthlyInterest, numberPayment)
                 / (Math.pow(1 + monthlyInterest, numberPayment) - 1));
-        System.out.println("Mortage bill is: " + mortage);
+        // System.out.println("Mortage bill is: " + mortage);
 
         // Format the mortage into currency
         String mortageFormatted = NumberFormat.getCurrencyInstance().format(mortage);
