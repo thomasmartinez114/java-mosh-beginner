@@ -9,6 +9,7 @@ public class Main {
         // if number is divisible by 3 or 5 = Fizzbuzz
         // if number isn't divisible by either get the number back
 
-        int test 12
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Number: ");
     }
 }
