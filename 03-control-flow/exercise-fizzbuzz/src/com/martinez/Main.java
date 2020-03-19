@@ -11,5 +11,6 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Number: ");
+        int number = scanner.nextInt();
     }
 }
