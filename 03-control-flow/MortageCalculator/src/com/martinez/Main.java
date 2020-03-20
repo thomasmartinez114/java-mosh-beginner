@@ -47,8 +47,9 @@ public class Main {
 
         final byte MONTHS_IN_YEAR = 12;
         final byte PERCENT = 100;
+
         int principal = 0;
-        float annualInterest = 0;
+        float monthlyInterest = 0;
 
         Scanner scanner = new Scanner(System.in);
 
@@ -64,9 +65,9 @@ public class Main {
         // Interest Rate
         while (true) {
             System.out.print("Annual Interest Rate: ");
-            annualInterest = scanner.nextFloat();
+            float annualInterest = scanner.nextFloat();
             if (annualInterest >= 1 && annualInterest <= 30)
-                float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
+                monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
                 break;
         }
             System.out.println("Enter a number between 1 - 30.")
