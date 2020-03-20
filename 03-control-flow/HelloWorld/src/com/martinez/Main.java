@@ -12,7 +12,7 @@ public class Main {
 		String input = "";
 		while (input.equals("quit")) {
 			System.out.print("Input: ");
-			input = scanner.next();
+			input = scanner.next().toLowerCase();
 		}
     }
 }
