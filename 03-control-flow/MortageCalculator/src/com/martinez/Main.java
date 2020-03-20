@@ -74,7 +74,7 @@ public class Main {
             System.out.println("Enter a number between 1 - 30.");
         }
 
-        // Period (Years)
+        // Period (Years) 
         while (true) {
         System.out.print("Length of Loan (Years): ");
         byte years = scanner.nextByte();
