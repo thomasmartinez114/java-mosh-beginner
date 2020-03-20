@@ -51,9 +51,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Principal
-        System.out.print("Principal/Loan: ");
-        int principal = scanner.nextInt();
-
+        while (true) {
+            System.out.print("Principal/Loan: ");
+            int principal = scanner.nextInt();
+            if (principal >= 1000 && principal <= 1_000_000)
+                break;
+            System.out.println("Enter a number between 1,000 and 1,000,000 please.");
+        }
         // Interest Rate
         System.out.print("Annual Interest Rate: ");
         float annualInterest = scanner.nextFloat();
