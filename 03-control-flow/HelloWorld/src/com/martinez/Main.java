@@ -10,7 +10,7 @@ public class Main {
 		// Ask for user input until they input quit
 		Scanner scanner = new Scanner(System.in);
 		String input = "";
-		while (!input.equals("quit")) {
+		while (true) {
 			System.out.print("Input: ");
 			input = scanner.next().toLowerCase();
 			if (input.equals("pass"))
