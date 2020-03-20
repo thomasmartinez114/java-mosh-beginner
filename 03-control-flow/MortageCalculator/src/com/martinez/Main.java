@@ -50,6 +50,7 @@ public class Main {
 
         int principal = 0;
         float monthlyInterest = 0;
+        int numPayments = 0;
 
         Scanner scanner = new Scanner(System.in);
 
@@ -66,17 +67,23 @@ public class Main {
         while (true) {
             System.out.print("Annual Interest Rate: ");
             float annualInterest = scanner.nextFloat();
-            if (annualInterest >= 1 && annualInterest <= 30)
+            if (annualInterest >= 1 && annualInterest <= 30) {
                 monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
                 break;
         }
-            System.out.println("Enter a number between 1 - 30.")
+            System.out.println("Enter a number between 1 - 30.");
         }
+
         // Period (Years)
+        while (true) {
         System.out.print("Length of Loan (Years): ");
         byte years = scanner.nextByte();
-        int numPayments = MONTHS_IN_YEAR * years;
-        // System.out.println(numPayments);
+        if (years >= 1 && years <= 30) {
+            numPayments = MONTHS_IN_YEAR * years;
+            break;
+        }
+        System.out.println("Enter a number between 1 - 30.");
+    }
 
         // Mortage Rate
         double mortage = principal
