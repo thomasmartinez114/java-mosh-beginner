@@ -15,5 +15,14 @@ public class Main {
 			input = scanner.next().toLowerCase();
 			System.out.println(input);
 		}
+
+		do {
+			System.out.print("Input: ");
+			input = scanner.next().toLowerCase();
+			System.out.println(input);
+		} while (!input.equals("quit"));
     }
 }
+
+// while will not run if condition is false
+// Do while will always execute atleast once
