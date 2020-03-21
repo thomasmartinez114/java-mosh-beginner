@@ -23,16 +23,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         principal = (int) readNumber("Principal: ", 1000, 1_000_000);
-        annualInterest = (float) ("Annual Interest Rate: ", 1, 30)
-
-        while (true) {
-        System.out.print("Length of Loan (Years): ");
-        years = scanner.nextByte();
-        if (years >= 1 && years <= 30)
-            break;
-
-        System.out.println("Enter a number between 1 - 30.");
-    }
+        annualInterest = (float) readNumber("Annual Interest Rate: ", 1, 30);
+        years = (byte) readNumber("Length of Loan (Years): ", 1, 30);
 
         double mortage = calculateMortage(principal, annualInterest, years);
 
