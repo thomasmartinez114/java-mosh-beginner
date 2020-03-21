@@ -94,4 +94,11 @@ public class Main {
         String formattedMortage = NumberFormat.getCurrencyInstance().format(mortage);
         System.out.println("Mortage is: " + formattedMortage);
     }
+
+    public static double calculateMortage(
+            int principal,
+            float annualInterest,
+            byte years) {
+        
+    }
 }
