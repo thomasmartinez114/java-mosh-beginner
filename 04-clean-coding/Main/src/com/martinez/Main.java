@@ -3,10 +3,11 @@ package com.martinez;
 public class Main {
 
     public static void main(String[] args) {
-	    greetUser("Thomas");
+	    greetUser("Thomas", "Martinez");
+	    greetUser("Jayar", "Amaro");
     }
 
-    public static void greetUser(String name) {
-        System.out.println("Hello " + name);
+    public static void greetUser(String firstName, String lastName) {
+        System.out.println("Hello " + firstName + " " + lastName);
     }
 }
