@@ -47,7 +47,7 @@ public class Main {
         System.out.println("Enter a number between 1 - 30.");
     }
 
-        calculateMortage(principal, annualInterest, years);
+        double mortage = calculateMortage(principal, annualInterest, years);
 
         String formattedMortage = NumberFormat.getCurrencyInstance().format(mortage);
         System.out.println("Mortage is: " + formattedMortage);
@@ -62,7 +62,7 @@ public class Main {
         final byte PERCENT = 100;
 
         float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
-        float numPayments = MONTHS_IN_YEAR * years;
+        short numPayments = (short) (MONTHS_IN_YEAR * years) ;
 
         double mortage = principal
                 * (monthlyInterest * Math.pow(1 + monthlyInterest, numPayments)
