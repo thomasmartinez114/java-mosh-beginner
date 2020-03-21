@@ -15,9 +15,10 @@ import java.text.NumberFormat;
 public class Main {
 
     public static void main(String[] args) {
+
         int principal = 0;
-        float monthlyInterest = 0;
-        int numPayments = 0;
+        float annualInterest = 0;
+        byte years = 0;
 
         Scanner scanner = new Scanner(System.in);
 
@@ -31,7 +32,7 @@ public class Main {
 
         while (true) {
             System.out.print("Annual Interest Rate: ");
-            float annualInterest = scanner.nextFloat();
+            annualInterest = scanner.nextFloat();
             if (annualInterest >= 1 && annualInterest <= 30)
                 break;
             System.out.println("Enter a number between 1 - 30.");
@@ -39,7 +40,7 @@ public class Main {
 
         while (true) {
         System.out.print("Length of Loan (Years): ");
-        byte years = scanner.nextByte();
+        years = scanner.nextByte();
         if (years >= 1 && years <= 30)
             break;
 
