@@ -53,6 +53,16 @@ public class Main {
         System.out.println("Mortage is: " + formattedMortage);
     }
 
+    public static double readNumber(String prompt) {
+        while (true) {
+            System.out.print(prompt);
+            annualInterest = scanner.nextFloat();
+            if (annualInterest >= 1 && annualInterest <= 30)
+                break;
+            System.out.println("Enter a number between 1 - 30.");
+        }
+    }
+
     public static double calculateMortage(
             int principal,
             float annualInterest,
