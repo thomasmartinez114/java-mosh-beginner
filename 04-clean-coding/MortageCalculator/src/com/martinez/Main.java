@@ -23,14 +23,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         principal = (int) readNumber("Principal: ", 1000, 1_000_000);
-
-        while (true) {
-            System.out.print("Annual Interest Rate: ");
-            annualInterest = scanner.nextFloat();
-            if (annualInterest >= 1 && annualInterest <= 30)
-                break;
-            System.out.println("Enter a number between 1 - 30.");
-        }
+        annualInterest = (float) ("Annual Interest Rate: ", 1, 30)
 
         while (true) {
         System.out.print("Length of Loan (Years): ");
