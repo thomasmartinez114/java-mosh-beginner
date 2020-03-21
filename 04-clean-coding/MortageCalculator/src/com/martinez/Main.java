@@ -53,11 +53,13 @@ public class Main {
         System.out.println("Mortage is: " + formattedMortage);
     }
 
-    public static double readNumber(String prompt) {
+    public static double readNumber(String prompt, double min, double max) {
+        Scanner scanner = new Scanner(System.in);
+        double value;
         while (true) {
             System.out.print(prompt);
-            annualInterest = scanner.nextFloat();
-            if (annualInterest >= 1 && annualInterest <= 30)
+            value = scanner.nextFloat();
+            if (value >= min && value <= max)
                 break;
             System.out.println("Enter a number between 1 - 30.");
         }
