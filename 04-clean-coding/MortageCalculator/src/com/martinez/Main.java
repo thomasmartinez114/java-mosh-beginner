@@ -22,13 +22,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        while (true) {
-            System.out.print("Principal/Loan: ");
-            principal = scanner.nextInt();
-            if (principal >= 1000 && principal <= 1_000_000)
-                break;
-            System.out.println("Enter a number between 1,000 - 1,000,000.");
-        }
+        principal = (int) readNumber("Principal: ", 1000, 1_000_000);
 
         while (true) {
             System.out.print("Annual Interest Rate: ");
