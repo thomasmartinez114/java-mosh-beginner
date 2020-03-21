@@ -1,3 +1,11 @@
+// Ask user for:
+// Principal
+// Annual Interest Rate (divide by 100 then divide by 12) to get monthly interest
+// Period (Years)
+// Return Mortage rate (monthly): $###.##
+// Formula used is:
+// M = (P(r(1+r)^n)/((1+r)^n)-1)
+
 package com.martinez;
 
 import java.util.Scanner;
@@ -7,14 +15,6 @@ import java.text.NumberFormat;
 public class Main {
 
     public static void main(String[] args) {
-	    // Ask user for:
-        // Principal
-        // Annual Interest Rate (divide by 100 then divide by 12) to get monthly interest
-        // Period (Years)
-        // Return Mortage rate (monthly): $###.##
-        // Formula used is:
-        // M = (P(r(1+r)^n)/((1+r)^n)-1)
-
         /* Testing Data
         // Static inputs for now then test
         // Testing data
