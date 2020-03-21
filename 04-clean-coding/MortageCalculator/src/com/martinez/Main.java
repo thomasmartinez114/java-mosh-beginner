@@ -61,8 +61,9 @@ public class Main {
             value = scanner.nextFloat();
             if (value >= min && value <= max)
                 break;
-            System.out.println("Enter a number between 1 - 30.");
+            System.out.println("Enter a number between " + min + " and " + max);
         }
+        return value;
     }
 
     public static double calculateMortage(
