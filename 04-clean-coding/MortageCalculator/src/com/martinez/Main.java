@@ -15,16 +15,9 @@ import java.text.NumberFormat;
 public class Main {
 
     public static void main(String[] args) {
-
-        int principal = 0;
-        float annualInterest = 0;
-        byte years = 0;
-
-        Scanner scanner = new Scanner(System.in);
-
-        principal = (int) readNumber("Principal: ", 1000, 1_000_000);
-        annualInterest = (float) readNumber("Annual Interest Rate: ", 1, 30);
-        years = (byte) readNumber("Length of Loan (Years): ", 1, 30);
+        int principal = (int) readNumber("Principal: ", 1000, 1_000_000);
+        float annualInterest = (float) readNumber("Annual Interest Rate: ", 1, 30);
+        byte years = (byte) readNumber("Length of Loan (Years): ", 1, 30);
 
         double mortage = calculateMortage(principal, annualInterest, years);
 
@@ -43,6 +36,26 @@ public class Main {
             System.out.println("Enter a number between " + min + " and " + max);
         }
         return value;
+    }
+
+    public static double calculateBalance(
+            int principal,
+            float annualInterest,
+            byte years,
+            short numOfPaymentsMade // short because # can be over 300 - byte can only store 256
+    ) {
+        final byte MONTHS_IN_YEAR = 12;
+        final byte PERCENT = 100;
+
+        float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
+        short numPayments = (short) (MONTHS_IN_YEAR * years);
+
+        // B = L[(1 + c)^n - (1 + c)^p] / [(1 + c)^n - 1]
+        double balance = principal
+                * (Math.pow(1 + monthlyInterest, numPayments) - Math.pow(1 + monthlyInterest, numOfPaymentsMade))
+                / (Math.pow(1 + monthlyInterest, numPayments) - 1);
+
+        return balance;
     }
 
     public static double calculateMortage(
