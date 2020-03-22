@@ -21,14 +21,18 @@ public class Main {
         float annualInterest = (float) readNumber("Annual Interest Rate: ", 1, 30);
         byte years = (byte) readNumber("Length of Loan (Years): ", 1, 30);
 
+        printMortage(principal, annualInterest, years);
+
+        printPaymentSchedule(principal, annualInterest, years);
+    }
+
+    private static void printMortage(int principal, float annualInterest, byte years) {
         double mortage = calculateMortage(principal, annualInterest, years);
         String formattedMortage = NumberFormat.getCurrencyInstance().format(mortage);
         System.out.println();
         System.out.println("MORTAGE");
         System.out.println("--------");
         System.out.println("Mortage is: " + formattedMortage);
-
-        printPaymentSchedule(principal, annualInterest, years);
     }
 
     private static void printPaymentSchedule(int principal, float annualInterest, byte years) {
