@@ -13,6 +13,8 @@ import java.text.NumberFormat;
 
 
 public class Main {
+    final static byte MONTHS_IN_YEAR = 12;
+    final static byte PERCENT = 100;
 
     public static void main(String[] args) {
         int principal = (int) readNumber("Principal: ", 1000, 1_000_000);
@@ -44,9 +46,6 @@ public class Main {
             byte years,
             short numOfPaymentsMade // short because # can be over 300 - byte can only store 256
     ) {
-        final byte MONTHS_IN_YEAR = 12;
-        final byte PERCENT = 100;
-
         float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
         short numPayments = (short) (MONTHS_IN_YEAR * years);
 
