@@ -31,7 +31,10 @@ public class Main {
         System.out.println();
         System.out.println("PAYMENT SCHEDULE");
         System.out.println("-----------");
-        
+        for (short month = 1; month <= years * MONTHS_IN_YEAR; month++) {
+            double balance = calculateBalance(principal, annualInterest, years, month);
+            System.out.println(NumberFormat.getCurrencyInstance().format(balance));
+        }
     }
 
     public static double readNumber(String prompt, double min, double max) {
