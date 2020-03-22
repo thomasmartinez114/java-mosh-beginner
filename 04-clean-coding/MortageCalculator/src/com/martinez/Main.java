@@ -61,10 +61,7 @@ public class Main {
             int principal,
             float annualInterest,
             byte years) {
-
-        final byte MONTHS_IN_YEAR = 12;
-        final byte PERCENT = 100;
-
+        
         float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
         short numPayments = (short) (MONTHS_IN_YEAR * years) ;
 
