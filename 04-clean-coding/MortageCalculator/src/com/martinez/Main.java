@@ -28,6 +28,10 @@ public class Main {
         System.out.println("--------");
         System.out.println("Mortage is: " + formattedMortage);
 
+        printPaymentSchedule(principal, annualInterest, years);
+    }
+
+    private static void printPaymentSchedule(int principal, float annualInterest, byte years) {
         System.out.println();
         System.out.println("PAYMENT SCHEDULE");
         System.out.println("-----------");
