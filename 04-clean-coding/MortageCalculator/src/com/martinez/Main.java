@@ -22,9 +22,16 @@ public class Main {
         byte years = (byte) readNumber("Length of Loan (Years): ", 1, 30);
 
         double mortage = calculateMortage(principal, annualInterest, years);
-
         String formattedMortage = NumberFormat.getCurrencyInstance().format(mortage);
+        System.out.println();
+        System.out.println("MORTAGE");
+        System.out.println("--------");
         System.out.println("Mortage is: " + formattedMortage);
+
+        System.out.println();
+        System.out.println("PAYMENT SCHEDULE");
+        System.out.println("-----------");
+        
     }
 
     public static double readNumber(String prompt, double min, double max) {
@@ -61,9 +68,9 @@ public class Main {
             int principal,
             float annualInterest,
             byte years) {
-        
+
         float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
-        short numPayments = (short) (MONTHS_IN_YEAR * years) ;
+        short numPayments = (short) (MONTHS_IN_YEAR * years);
 
         double mortage = principal
                 * (monthlyInterest * Math.pow(1 + monthlyInterest, numPayments)
